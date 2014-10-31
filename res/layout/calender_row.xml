@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="32dp"
+    android:background="@drawable/calender_row_bg"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="1.0" >
+
+    <no.irn.app.SnmsTextView
+        android:id="@+id/row_date"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_weight=".13"
+        android:paddingLeft="10dp"
+        android:text="Medium Text"
+        android:textAppearance="@android:style/TextAppearance.Small" 
+        android:textSize="14dp" />
+
+    <no.irn.app.SnmsTextView
+        android:id="@+id/row_fajr"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_weight=".145"
+        android:text="Medium Text"
+        android:textAppearance="@android:style/TextAppearance.Small" 
+        android:textSize="14dp" />
+
+    <no.irn.app.SnmsTextView
+        android:id="@+id/row_soloppgang"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_weight=".145"
+        android:text="Medium Text"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textSize="14dp" />
+
+    <no.irn.app.SnmsTextView
+        android:id="@+id/row_duhr"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_weight=".145"
+        android:text="Ferdig"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textSize="14dp" />
+
+    <no.irn.app.SnmsTextView
+        android:id="@+id/row_asr"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_weight=".145"
+        android:text="Ferdig"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textSize="14dp" />
+
+    <no.irn.app.SnmsTextView
+        android:id="@+id/row_magrihb"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_weight=".145"
+        android:text="Ferdig"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textSize="14dp" />
+
+    <no.irn.app.SnmsTextView
+        android:id="@+id/row_isha"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_weight=".145"
+        android:text="Ferdig"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textSize="14dp" />
+
+</LinearLayout>

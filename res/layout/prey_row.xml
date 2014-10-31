@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:orientation="vertical" 
+    android:background="@drawable/border_none_active_pray" 
+    >
+    
+    <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="1.0"
+    >
+	 
+    <TextView
+        android:paddingLeft="20dp"
+        android:id="@+id/row_title"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight=".4"
+        android:gravity="center_vertical"
+        android:text="Soloppgang"
+       android:textSize="@dimen/snms_text_small" />
+
+    <TextView
+        android:id="@+id/row_time"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight=".2"
+        android:gravity="center_vertical"
+        android:text="Medium Text"
+        android:textSize="@dimen/snms_text_small" />
+    <TextView
+        android:id="@+id/row_status"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight=".25"
+        android:gravity="center_vertical"
+        android:text="Ferdig"
+         android:textSize="@dimen/snms_text_small" />
+    
+    <ImageButton 
+        android:layout_height="fill_parent" 
+        android:layout_width="0dp" 
+        android:onClick="setAlarm" 
+        android:gravity="center"
+        android:layout_weight=".15" 
+        android:background="@drawable/snmsalarmbutton"
+        android:id="@+id/alarmclock_inactive" 
+       android:src="@drawable/ic_alarm_clock"/>
+    
+	</LinearLayout>
+</LinearLayout>

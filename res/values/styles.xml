@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="SnmsTheme" parent="Theme.Sherlock.Light.DarkActionBar">
+        <item name="homeAsUpIndicator">@null</item>
+        <item name="android:homeAsUpIndicator">@drawable/homeicon</item>
+   		<item name="android:actionBarStyle">@style/SnmsActionBar</item>
+   		<item name="actionBarSize">@dimen/snms_action_bar_default_height</item>   
+   		<item name="android:actionBarSize">@dimen/snms_action_bar_default_height</item>
+   		<item name="android:minWidth">@dimen/snms_action_button_min_width</item> 
+   		<item name="android:icon">@drawable/ic_logo</item> 
+        <!-- >item name="android:actionBarStyle">@style/SnmsActionBar</item-->
+        <!--item name="android:background">@drawable/snms_actionbar_background</item-->
+    </style>
+    
+ 
+    
+    
+    <!-- >style name="SnmsActionBar" parent="Theme.Sherlock.Light.DarkActionBar">
+        <item name="android:background">@drawable/snms_actionbar_background</item>
+    </style-->
+<style name="CustomNPStyle">
+  <item name="android:textColor">@color/white</item>
+</style>
+    <style name="SnmsActionBar" parent="Widget.Sherlock.ActionBar">
+  	   <item name="android:background">@drawable/snms_actionbar_background</item>
+  	   <item name="android:titleTextStyle">@style/TextAppearance.SnmsActionBar.Title</item>
+  	   
+	</style>
+	
+    <style name="TextAppearance.SnmsActionBar.Title" parent="Widget">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+</resources>
