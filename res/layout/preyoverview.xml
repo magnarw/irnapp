@@ -154,7 +154,7 @@
             android:weightSum="1.0" >
 
             <Button
-                android:id="@+id/newsShortCut"
+                android:id="@+id/monthlyCalenderShortCut"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
@@ -162,10 +162,10 @@
                 android:layout_weight="0.333"
                 android:background="@drawable/snmsbutton"
                 android:drawablePadding="0sp"
-                android:drawableTop="@drawable/ic_news"
+                android:drawableTop="@drawable/ic_calendar"
                 android:paddingTop="3dp"
                 android:paddingBottom="3dp"
-                android:text="Nyheter"
+                android:text="Månedstabells"
                 android:textColor="#FFFFFF"
                 android:textSize="@dimen/snms_text_button" >
             </Button>
@@ -188,7 +188,7 @@
             </Button>
 
             <Button
-                android:id="@+id/qiblaDonationShortCut"
+                android:id="@+id/halalDonationShortCut"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
@@ -199,7 +199,7 @@
                 android:drawableTop="@drawable/ic_donation"
                 android:paddingTop="3dp"
                 android:paddingBottom="3dp"
-                android:text="Donasjon"
+                android:text="Halal"
                 android:textColor="#FFFFFF"
                 android:textSize="@dimen/snms_text_button" >
             </Button>
@@ -213,7 +213,7 @@
             android:weightSum="1.0" >
 
             <Button
-                android:id="@+id/eventsShortCut"
+                android:id="@+id/hijriShortCut"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
@@ -222,15 +222,14 @@
                 android:background="@drawable/snmsbutton"
                 android:drawablePadding="0sp"
                 android:drawableTop="@drawable/ic_events"
-                android:paddingTop="3dp"
                 android:paddingBottom="3dp"
-                android:text="Events"
+                android:paddingTop="3dp"
+                android:text="Hijri"
                 android:textColor="#FFFFFF"
-                android:textSize="@dimen/snms_text_button" >
-            </Button>
+                android:textSize="@dimen/snms_text_button" />
 
             <Button
-                android:id="@+id/buildShortcut"
+                android:id="@+id/aboutShortcut"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
@@ -238,10 +237,10 @@
                 android:layout_weight="0.333"
                 android:background="@drawable/snmsbutton"
                 android:drawablePadding="0sp"
-                android:drawableTop="@drawable/ic_buildproject"
+                android:drawableTop="@drawable/ic_calendar"
                 android:paddingTop="3dp"
                 android:paddingBottom="3dp"
-                android:text="Byggeprosjekt"
+                android:text="Om IRN"
                 android:textColor="#FFFFFF"
                 android:textSize="@dimen/snms_text_button" >
             </Button>

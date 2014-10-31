@@ -5,7 +5,8 @@ package no.irn.app;
 
 
 import no.irn.app.about.AboutSnmsFragment;
-import no.irn.app.donation.DonationFragment;
+import no.irn.app.halal.HalalList;
+import no.irn.app.hijri.HijriList;
 import no.irn.app.news.BuildProjectListFragment;
 import no.irn.app.news.EventListFragment;
 import no.irn.app.news.NewsListFragment;
@@ -35,13 +36,13 @@ public class SampleListFragment extends ListFragment {
 		super.onActivityCreated(savedInstanceState);
 		SampleAdapter adapter = new SampleAdapter(getActivity());
 		adapter.add(new SampleItem("Hjem", R.drawable.ic_apphome));
-	    adapter.add(new SampleItem("Nyheter", R.drawable.ic_news));
-	    adapter.add(new SampleItem("Donasjon", R.drawable.ic_donation));
+	    adapter.add(new SampleItem("Månedstabell", R.drawable.ic_news));
+	    adapter.add(new SampleItem("Halal", R.drawable.ic_donation));
+	    adapter.add(new SampleItem("Hijri", R.drawable.ic_events));
 	    adapter.add(new SampleItem("Qibla", R.drawable.ic_qibla));
-	    adapter.add(new SampleItem("Events", R.drawable.ic_events));
-	    adapter.add(new SampleItem("Byggeprosjektet", R.drawable.ic_buildproject));
+	   
 	 
-	    adapter.add(new SampleItem("Om SNMS", R.drawable.ic_logo));
+	    adapter.add(new SampleItem("Om IRN", R.drawable.ic_logo));
 	    
 	    adapter.add(new SampleItem("Innstillinger", R.drawable.ic_settings));
 	
@@ -66,26 +67,24 @@ public class SampleListFragment extends ListFragment {
 			newContent1 = new PreyOverviewFragment();
 			break;
 		case 1:
-			newContent1 = new NewsListFragment();
+			newContent1 = new PrayCalenderListFragment();
 			break;
 		case 2:
-			newContent1 = new DonationFragment();
+			newContent1 = new HalalList();
 			break;	
 		case 3:
-			newContent1 = new QiblaFragment();
+			newContent1 = new HijriList();
 			break;	
 		case 4:
-			newContent1 = new EventListFragment();
+			newContent1 = new QiblaFragment();
 			break;	
-		case 5:
-			newContent1 = new BuildProjectListFragment();
-			break;	
+
 		
-		case 6:
+		case 5:
 			newContent1 = new AboutSnmsFragment();
 			break;		
 		
-		case 7:
+		case 6:
 			newContent1 = new SettingsFragment();
 			break;	
 		}

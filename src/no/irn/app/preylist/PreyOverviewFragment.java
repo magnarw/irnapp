@@ -10,6 +10,7 @@ import java.util.TimeZone;
 
 import no.irn.app.BaseActivity;
 import no.irn.app.MainApplication;
+import no.irn.app.PrayCalenderListFragment;
 import no.irn.app.PreyCountDownTimer;
 import no.irn.app.PreyOverView;
 import no.irn.app.alarm.Alarm;
@@ -19,7 +20,8 @@ import no.irn.app.alarm.AlarmUtilities;
 import no.irn.app.database.SnmsDAO;
 import no.irn.app.domain.NewsItem;
 import no.irn.app.domain.PreyItem;
-import no.irn.app.donation.DonationFragment;
+import no.irn.app.halal.HalalList;
+import no.irn.app.hijri.HijriList;
 import no.irn.app.images.ImageCacheManager;
 import no.irn.app.jumma.JummaAdaptor;
 import no.irn.app.jumma.JummaListner;
@@ -94,13 +96,12 @@ public class PreyOverviewFragment extends Fragment implements OnClickListener,
 	private ImageButton nextNews;
 	private ImageButton prevNews;
 
-	private Button eventsShortCut;
-	private Button buildShortcut;
+	private Button montlyCalenderShortCut;
+	private Button hijriShortcut;
 	private Button settingsShortCut;
-	private Button qiblaDonationShortCut;
+	private Button halalShortCut;
 	private Button qiblaShortcut;
-	private Button newsShortCut;
-	private PreyItem currentJumma;
+	private Button hijriShorcut;
 
 	private TextView calender;
 	private DateTime currentDateTime;
@@ -148,21 +149,20 @@ public class PreyOverviewFragment extends Fragment implements OnClickListener,
 		shortCutContainer = (LinearLayout) root
 				.findViewById(R.id.shortCutContainer);
 
-		eventsShortCut = (Button) root.findViewById(R.id.eventsShortCut);
-		buildShortcut = (Button) root.findViewById(R.id.buildShortcut);
+		montlyCalenderShortCut = (Button) root.findViewById(R.id.monthlyCalenderShortCut);
+		hijriShortcut = (Button) root.findViewById(R.id.hijriShortCut);
 		settingsShortCut = (Button) root.findViewById(R.id.settingsShortCut);
-		qiblaDonationShortCut = (Button) root
-				.findViewById(R.id.qiblaDonationShortCut);
+		halalShortCut = (Button) root
+				.findViewById(R.id.halalDonationShortCut);
 		settingsShortCut = (Button) root.findViewById(R.id.settingsShortCut);
 		qiblaShortcut = (Button) root.findViewById(R.id.qiblaShortcut);
-		newsShortCut = (Button) root.findViewById(R.id.newsShortCut);
-		eventsShortCut.setOnClickListener(this);
-		buildShortcut.setOnClickListener(this);
+		hijriShorcut = (Button) root.findViewById(R.id.hijriShortCut);
+		montlyCalenderShortCut.setOnClickListener(this);
 		settingsShortCut.setOnClickListener(this);
 
-		qiblaDonationShortCut.setOnClickListener(this);
+		halalShortCut.setOnClickListener(this);
 		qiblaShortcut.setOnClickListener(this);
-		newsShortCut.setOnClickListener(this);
+		hijriShorcut.setOnClickListener(this);
 	
 		latestNewsContainer = (LinearLayout) root
 				.findViewById(R.id.latestNewsContainer);
@@ -222,8 +222,7 @@ public class PreyOverviewFragment extends Fragment implements OnClickListener,
 		renderPreyList();
 		renderAlarmState();
 
-		NewsManager.getInstance().getNews(createSuccessListener(),
-				createErrorListener(), 6, 0, 0, true);
+		
 
 	}
 
@@ -542,12 +541,12 @@ public class PreyOverviewFragment extends Fragment implements OnClickListener,
 					currentNewsItem2);
 			switchFragment(myDetailFragment, null);
 		}
-		if (v.equals(eventsShortCut)) {
-			EventListFragment myDetailFragment = new EventListFragment();
+		if (v.equals(montlyCalenderShortCut)) {
+			PrayCalenderListFragment myDetailFragment = new PrayCalenderListFragment();
 			switchFragment(myDetailFragment, null);
 		}
-		if (v.equals(buildShortcut)) {
-			BuildProjectListFragment myDetailFragment = new BuildProjectListFragment();
+		if (v.equals(hijriShortcut)) {
+			HijriList myDetailFragment = new HijriList();
 			switchFragment(myDetailFragment, null);
 		}
 		if (v.equals(settingsShortCut)) {
@@ -558,12 +557,12 @@ public class PreyOverviewFragment extends Fragment implements OnClickListener,
 			QiblaFragment myDetailFragment = new QiblaFragment();
 			switchFragment(myDetailFragment, null);
 		}
-		if (v.equals(newsShortCut)) {
-			NewsListFragment myDetailFragment = new NewsListFragment();
+		if (v.equals(hijriShorcut)) {
+			HijriList myDetailFragment = new HijriList();
 			switchFragment(myDetailFragment, null);
 		}
-		if (v.equals(qiblaDonationShortCut)) {
-			DonationFragment myDetailFragment = new DonationFragment();
+		if (v.equals(halalShortCut)) {
+			HalalList myDetailFragment = new HalalList();
 			switchFragment(myDetailFragment, null);
 		}
 
