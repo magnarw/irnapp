@@ -111,6 +111,7 @@ public class PreyOverView extends  BaseActivity {
 		
 	}
 	
+	
 	public void setAlarm(String alarm,Boolean value) {
 		for(AlarmChangeListner alarmChangeListner : alarmChangeListners){
 			alarmChangeListner.alarmChanged(alarm,value);

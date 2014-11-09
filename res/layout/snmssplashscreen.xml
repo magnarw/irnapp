@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:src="@drawable/ic_launcher_snms2_small" />
+        android:src="@drawable/ic_logo_new_active" />
  
     <TextView
         android:layout_width="fill_parent"
@@ -19,6 +19,6 @@
         android:textColor="#454545"
         android:gravity="center_horizontal"
         android:layout_alignParentBottom="true"
-        android:text="www.muslimskesenter.no" />
+        android:text="www.irn.no" />
  
 </RelativeLayout>

@@ -16,6 +16,7 @@ import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager.BackStackEntry;
@@ -193,6 +194,26 @@ public abstract class BaseActivity extends SlidingFragmentActivity implements
 		return true;
 	}
 	
+	 public void clickRestServ(View view){
+		 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.irn.no/butikk-og-servering"));
+			startActivity(browserIntent);
+	 }
+	 
+	 public void clickProdOgProd(View view){
+		 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.irn.no/produsent-og-produkter"));
+			startActivity(browserIntent);
+	 }
+	 
+	 public void clickIngredienser(View view){
+		 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.irn.no/e-nummer-database"));
+			startActivity(browserIntent);
+	 }
+	 
+	 public void clickHijiri(View view){
+		 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.irn.no/islamsk-kalender"));
+			startActivity(browserIntent);
+	 }
+	 
 	
 
 

@@ -77,7 +77,7 @@ public class HijriList extends Fragment  {
 		   super.onCreateView(inflater, container,
 			        savedInstanceState);
 
-		  View root = inflater.inflate(R.layout.listhalal, container,false);
+		  View root = inflater.inflate(R.layout.listhijiri, container,false);
 		  return root; 
 
 	}

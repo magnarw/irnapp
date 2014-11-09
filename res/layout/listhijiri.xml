@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:id="@+id/prdOgpro"
+    android:onClick="clickHijiri"
+    android:layout_height="wrap_content" 
+    android:background="@drawable/border_halalitem"
+    android:weightSum="1"
+    >
+	
+      <ImageView
+	    android:id="@+id/newsImage"
+		android:layout_weight=".3"
+		android:src="@drawable/prodandprod"
+	    android:layout_width="0dp"
+	    android:layout_height="78dp"
+	    android:scaleType="fitStart"
+	    android:padding="5dp"
+	 />
+     
+    <LinearLayout 
+    android:layout_width="0dp"
+    android:orientation="vertical"
+    android:layout_height="wrap_content" 
+    android:layout_weight="0.7"
+   
+    >
+       
+    <TextView
+        android:id="@+id/row_news_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:paddingBottom="2dp"
+        android:paddingLeft="5dp"
+        android:text="Hijri"
+        android:textSize="24sp" />
+    
+    
+    
+    </LinearLayout>
+
+
+</LinearLayout>
+ 
+ </LinearLayout>

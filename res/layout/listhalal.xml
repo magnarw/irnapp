@@ -9,14 +9,17 @@
 <LinearLayout 
     android:layout_width="match_parent"
     android:orientation="horizontal"
+    android:id="@+id/prdOgpro"
+    android:onClick="clickProdOgProd"
     android:layout_height="wrap_content" 
+    android:background="@drawable/border_halalitem"
     android:weightSum="1"
     >
 	
       <ImageView
-	    android:id="@+id/halalImage"
-	    android:src="@drawable/halal1"
+	    android:id="@+id/newsImage"
 		android:layout_weight=".3"
+		android:src="@drawable/prodandprod"
 	    android:layout_width="0dp"
 	    android:layout_height="78dp"
 	    android:scaleType="fitStart"
@@ -28,8 +31,9 @@
     android:orientation="vertical"
     android:layout_height="wrap_content" 
     android:layout_weight="0.7"
+   
     >
-        
+       
     <TextView
         android:id="@+id/row_news_title"
         android:layout_width="wrap_content"
@@ -37,25 +41,27 @@
         android:gravity="left"
         android:paddingBottom="2dp"
         android:paddingLeft="5dp"
-        android:text="PRODUSENT OG PRODUKT "
-        android:textSize="18sp" />
+        android:text="Produkt og produsent"
+        android:textSize="24sp" />
     
     
     
     </LinearLayout>
-    
 </LinearLayout>
 <LinearLayout 
     android:layout_width="match_parent"
     android:orientation="horizontal"
+    android:id="@+id/restserv"
+    android:onClick="clickRestServ"
     android:layout_height="wrap_content" 
+    android:background="@drawable/border_halalitem"
     android:weightSum="1"
     >
 	
       <ImageView
-	    android:id="@+id/halalImage"
-	    android:src="@drawable/halal1"
+	    android:id="@+id/newsImage"
 		android:layout_weight=".3"
+		android:src="@drawable/resturantserv"
 	    android:layout_width="0dp"
 	    android:layout_height="78dp"
 	    android:scaleType="fitStart"
@@ -67,8 +73,9 @@
     android:orientation="vertical"
     android:layout_height="wrap_content" 
     android:layout_weight="0.7"
+   
     >
-        
+       
     <TextView
         android:id="@+id/row_news_title"
         android:layout_width="wrap_content"
@@ -76,26 +83,27 @@
         android:gravity="left"
         android:paddingBottom="2dp"
         android:paddingLeft="5dp"
-        android:text="PRODUSENT OG PRODUKT "
-        android:textSize="18sp" />
+        android:text="Butikk og servering"
+        android:textSize="24sp" />
     
     
     
     </LinearLayout>
-    
-    
 </LinearLayout>
- <LinearLayout 
+       <LinearLayout 
     android:layout_width="match_parent"
     android:orientation="horizontal"
+    android:id="@+id/restserv"
     android:layout_height="wrap_content" 
+    android:background="@drawable/border_halalitem"
+    android:onClick="clickIngredienser"
     android:weightSum="1"
     >
 	
       <ImageView
-	    android:id="@+id/halalImage"
-	    android:src="@drawable/halal1"
+	    android:id="@+id/newsImage"
 		android:layout_weight=".3"
+		android:src="@drawable/fruits_sweet_fruit_213988"
 	    android:layout_width="0dp"
 	    android:layout_height="78dp"
 	    android:scaleType="fitStart"
@@ -107,8 +115,9 @@
     android:orientation="vertical"
     android:layout_height="wrap_content" 
     android:layout_weight="0.7"
+   
     >
-        
+       
     <TextView
         android:id="@+id/row_news_title"
         android:layout_width="wrap_content"
@@ -116,13 +125,12 @@
         android:gravity="left"
         android:paddingBottom="2dp"
         android:paddingLeft="5dp"
-        android:text="PRODUSENT OG PRODUKT "
-        android:textSize="18sp" />
+        android:text="E-nr og ingredienser"
+        android:textSize="24sp" />
     
     
     
     </LinearLayout>
-    
 </LinearLayout>
  
  </LinearLayout>
