@@ -7,7 +7,7 @@
    		<item name="actionBarSize">@dimen/snms_action_bar_default_height</item>   
    		<item name="android:actionBarSize">@dimen/snms_action_bar_default_height</item>
    		<item name="android:minWidth">@dimen/snms_action_button_min_width</item> 
-   		<item name="android:icon">@drawable/ic_logo</item> 
+   		<item name="android:icon">@drawable/ic_irn</item> 
         <!-- >item name="android:actionBarStyle">@style/SnmsActionBar</item-->
         <!--item name="android:background">@drawable/snms_actionbar_background</item-->
     </style>

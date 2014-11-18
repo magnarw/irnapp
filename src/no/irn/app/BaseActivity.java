@@ -108,7 +108,7 @@ public abstract class BaseActivity extends SlidingFragmentActivity implements
 		// sm.setSelectorDrawable(R.drawable.flamingo);
 		sm.setSelectorEnabled(false);
 		sm.setFadeDegree(0.35f);
-		sm.setTouchModeAbove(SlidingMenu.LEFT);
+		sm.setTouchModeAbove(SlidingMenu.TOUCHMODE_NONE);
 
 		getSupportActionBar().setDisplayShowCustomEnabled(true);
 		getSupportActionBar().setDisplayShowTitleEnabled(false);
@@ -124,6 +124,7 @@ public abstract class BaseActivity extends SlidingFragmentActivity implements
 		ActionBar.LayoutParams params = new ActionBar.LayoutParams(
 				ActionBar.LayoutParams.MATCH_PARENT,
 				ActionBar.LayoutParams.MATCH_PARENT, Gravity.CENTER);
+		getSlidingMenu().setTouchModeAbove(SlidingMenu.TOUCHMODE_NONE);
 		getSupportActionBar().setCustomView(v, params);
 
 		homeButton.setOnClickListener(this);
@@ -150,10 +151,7 @@ public abstract class BaseActivity extends SlidingFragmentActivity implements
 					}
 		});
 		
-		if(getSupportFragmentManager().getBackStackEntryCount()>5){
-			BackStackEntry f = getSupportFragmentManager().getBackStackEntryAt(1);
-			getSupportFragmentManager();
-		}
+	
 		
 		if (fragment2 == null) {
 			if (currentFragment2 != null) {
@@ -161,18 +159,16 @@ public abstract class BaseActivity extends SlidingFragmentActivity implements
 						 t.remove(currentFragment1).remove(currentFragment2)
 						.replace(R.id.content_frame, fragment1);
 						
-						if(getSupportFragmentManager().getBackStackEntryCount()<3)
+						
 							t.addToBackStack("tag").commit();
-						else
-							t.commit();
+					
 			} else {
 				getSupportFragmentManager().beginTransaction();
 				FragmentTransaction t = getSupportFragmentManager().beginTransaction();
 				 t.remove(currentFragment1).replace(R.id.content_frame, fragment1);
-				if(getSupportFragmentManager().getBackStackEntryCount()<3)
+				
 					t.addToBackStack("tag").commit();
-				else
-					t.commit();
+			
 			}
 		} else {
 			getSupportFragmentManager().beginTransaction()

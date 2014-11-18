@@ -107,38 +107,12 @@
         android:orientation="vertical" >
     </LinearLayout>
 
-    <HorizontalScrollView
-        android:id="@+id/latesetNewsScrollView"
-        android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:background="@color/snmsDarkBlue"
-        android:paddingBottom="2dp"
-        android:paddingTop="2dp"
-        android:paddingLeft="@dimen/list_padding"
-        android:paddingRight="@dimen/list_padding"
-        android:visibility="gone" >
 
-        <LinearLayout
-            android:id="@+id/latestNewsContainer"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@color/snmsDarkBlue"
-            android:orientation="horizontal"
-            android:weightSum="1.0" >
-
-            <ProgressBar
-                android:id="@+id/newsSpinnerProgress2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center" >
-            </ProgressBar>
-        </LinearLayout>
-    </HorizontalScrollView>
 
     <LinearLayout
         android:id="@+id/shortCutContainer"
         android:layout_width="match_parent"
-        android:layout_height="130dp"
+        android:layout_height="180dp"
         android:background="@color/snmsDarkBlue"
         android:orientation="vertical"
         android:paddingBottom="5dp"
@@ -165,27 +139,26 @@
                 android:drawableTop="@drawable/ic_calendar"
                 android:paddingTop="3dp"
                 android:paddingBottom="3dp"
-                android:text="Månedstabells"
+                android:text="Månedstabell"
                 android:textColor="#FFFFFF"
                 android:textSize="@dimen/snms_text_button" >
             </Button>
 
             <Button
-                android:id="@+id/qiblaShortcut"
+                android:id="@+id/halalEShortCut"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
-                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
                 android:layout_weight="0.333"
                 android:background="@drawable/snmsbutton"
                 android:drawablePadding="0sp"
-                android:drawableTop="@drawable/ic_qibla"
-                android:paddingTop="3dp"
+                android:drawableTop="@drawable/ic_enr"
                 android:paddingBottom="3dp"
-                android:text="Qibla"
+                android:paddingTop="3dp"
+                android:text="E-nr database"
                 android:textColor="#FFFFFF"
-                android:textSize="@dimen/snms_text_button" >
-            </Button>
+                android:textSize="@dimen/snms_text_button" />
 
             <Button
                 android:id="@+id/halalDonationShortCut"
@@ -199,7 +172,7 @@
                 android:drawableTop="@drawable/ic_halal"
                 android:paddingTop="3dp"
                 android:paddingBottom="3dp"
-                android:text="Halal"
+                android:text="Produkt og prod."
                 android:textColor="#FFFFFF"
                 android:textSize="@dimen/snms_text_button" >
             </Button>
@@ -229,6 +202,63 @@
                 android:textSize="@dimen/snms_text_button" />
 
             <Button
+                android:id="@+id/moskShortcut"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_marginBottom="0dp"
+                android:layout_weight="0.333"
+                android:background="@drawable/snmsbutton"
+                android:drawablePadding="0sp"
+                android:drawableTop="@drawable/ic_mosque"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:text="Moskeer"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/snms_text_button" />
+
+            <Button
+                android:id="@+id/butogSerShortCut"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_marginBottom="0dp"
+                android:layout_weight="0.333"
+                android:background="@drawable/snmsbutton"
+                android:drawablePadding="0sp"
+                android:drawableTop="@drawable/ic_shop"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:text="Butikk og serv."
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/snms_text_button" />
+
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/snmsDarkBlue"
+            android:orientation="horizontal"
+            android:weightSum="1.0" >
+
+            <Button
+                android:id="@+id/qiblaShortcut"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_marginTop="0dp"
+                android:layout_weight="0.333"
+                android:background="@drawable/snmsbutton"
+                android:drawablePadding="0sp"
+                android:drawableTop="@drawable/ic_qibla"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:text="Qibla"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/snms_text_button" />
+
+            <Button
                 android:id="@+id/aboutShortcut"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -237,13 +267,12 @@
                 android:layout_weight="0.333"
                 android:background="@drawable/snmsbutton"
                 android:drawablePadding="0sp"
-                android:drawableTop="@drawable/ic_calendar"
-                android:paddingTop="3dp"
+                android:drawableTop="@drawable/ic_irn"
                 android:paddingBottom="3dp"
+                android:paddingTop="3dp"
                 android:text="Om IRN"
                 android:textColor="#FFFFFF"
-                android:textSize="@dimen/snms_text_button" >
-            </Button>
+                android:textSize="@dimen/snms_text_button" />
 
             <Button
                 android:id="@+id/settingsShortCut"
@@ -255,13 +284,14 @@
                 android:background="@drawable/snmsbutton"
                 android:drawablePadding="0sp"
                 android:drawableTop="@drawable/ic_settings"
-                android:paddingTop="3dp"
                 android:paddingBottom="3dp"
+                android:paddingTop="3dp"
                 android:text="Innstillinger"
                 android:textColor="#FFFFFF"
-                android:textSize="@dimen/snms_text_button" >
-            </Button>
+                android:textSize="@dimen/snms_text_button" />
+
         </LinearLayout>
+        
     </LinearLayout>
 
 </LinearLayout>

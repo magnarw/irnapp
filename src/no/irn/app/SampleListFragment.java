@@ -5,7 +5,10 @@ package no.irn.app;
 
 
 import no.irn.app.about.AboutSnmsFragment;
-import no.irn.app.halal.HalalList;
+import no.irn.app.halal.HalalButOgServWebView;
+import no.irn.app.halal.HalalEogIngredienserWebView;
+import no.irn.app.halal.HalalSlaktOgProdWebView;
+import no.irn.app.halal.MosqWebView;
 import no.irn.app.hijri.HijriList;
 import no.irn.app.news.BuildProjectListFragment;
 import no.irn.app.news.EventListFragment;
@@ -37,12 +40,15 @@ public class SampleListFragment extends ListFragment {
 		SampleAdapter adapter = new SampleAdapter(getActivity());
 		adapter.add(new SampleItem("Hjem", R.drawable.ic_apphome));
 	    adapter.add(new SampleItem("Månedstabell", R.drawable.ic_news));
-	    adapter.add(new SampleItem("Halal", R.drawable.ic_donation));
-	    adapter.add(new SampleItem("Hijri", R.drawable.ic_events));
+	    adapter.add(new SampleItem("Enr database", R.drawable.ic_enr));
+	    adapter.add(new SampleItem("Produsent og produkt", R.drawable.ic_halal));
+	    adapter.add(new SampleItem("Butikk og servering", R.drawable.ic_shop));
+	  
+	    adapter.add(new SampleItem("Hijri", R.drawable.ic_hijri));
+	    adapter.add(new SampleItem("Moskeer", R.drawable.ic_mosque));
 	    adapter.add(new SampleItem("Qibla", R.drawable.ic_qibla));
 	   
-	 
-	    adapter.add(new SampleItem("Om IRN", R.drawable.ic_logo));
+	    adapter.add(new SampleItem("Om IRN", R.drawable.ic_irn));
 	    
 	    adapter.add(new SampleItem("Innstillinger", R.drawable.ic_settings));
 	
@@ -58,6 +64,8 @@ public class SampleListFragment extends ListFragment {
 		}
 	}
 	
+	
+	
 	@Override
 	public void onListItemClick(ListView lv, View v, int position, long id) {
 		Fragment newContent1 = null;
@@ -70,21 +78,28 @@ public class SampleListFragment extends ListFragment {
 			newContent1 = new PrayCalenderListFragment();
 			break;
 		case 2:
-			newContent1 = new HalalList();
+			newContent1 = new HalalEogIngredienserWebView();
 			break;	
 		case 3:
-			newContent1 = new HijriList();
+			newContent1 = new HalalSlaktOgProdWebView();
 			break;	
 		case 4:
+			newContent1 = new HalalButOgServWebView();
+			break;
+		case 5:
+			newContent1 = new HijriList();
+			break;	
+		case 6:
+			newContent1 = new MosqWebView();
+			break;	
+		case 7:
 			newContent1 = new QiblaFragment();
 			break;	
-
-		
-		case 5:
+		case 8:
 			newContent1 = new AboutSnmsFragment();
 			break;		
 		
-		case 6:
+		case 9:
 			newContent1 = new SettingsFragment();
 			break;	
 		}

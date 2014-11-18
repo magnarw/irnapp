@@ -22,7 +22,7 @@ public class MainApplication extends Application {
 	@Override
 	public void onCreate() {
 		super.onCreate();
-		Parse.initialize(this, "RcWKbjy5QcATJWPveo9IfQvbRGUiEYTDBQsA0Cnj", "EvN5nLPuxmVRakPMhkuohoFI9zf56z1CRPpT7XGQ");
+		Parse.initialize(this, "W1fM9m0XvHwVl9w21qVGhTgytFZO3wU4IuJ8O1Gf", "OedIIs1dlK6j95juO9NsXKHyKO1HCL1U6y8Ndoj2");
 		PushService.setDefaultPushCallback(this, PreyOverView.class);
 		
 		MainApplication.context = getApplicationContext();

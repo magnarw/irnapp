@@ -13,6 +13,7 @@ import no.irn.app.MainApplication;
 import no.irn.app.PrayCalenderListFragment;
 import no.irn.app.PreyCountDownTimer;
 import no.irn.app.PreyOverView;
+import no.irn.app.about.AboutSnmsFragment;
 import no.irn.app.alarm.Alarm;
 import no.irn.app.alarm.AlarmChangeListner;
 import no.irn.app.alarm.AlarmDialogFragment;
@@ -20,7 +21,10 @@ import no.irn.app.alarm.AlarmUtilities;
 import no.irn.app.database.SnmsDAO;
 import no.irn.app.domain.NewsItem;
 import no.irn.app.domain.PreyItem;
-import no.irn.app.halal.HalalList;
+import no.irn.app.halal.HalalButOgServWebView;
+import no.irn.app.halal.HalalEogIngredienserWebView;
+import no.irn.app.halal.HalalSlaktOgProdWebView;
+import no.irn.app.halal.MosqWebView;
 import no.irn.app.hijri.HijriList;
 import no.irn.app.images.ImageCacheManager;
 import no.irn.app.jumma.JummaAdaptor;
@@ -102,6 +106,12 @@ public class PreyOverviewFragment extends Fragment implements OnClickListener,
 	private Button halalShortCut;
 	private Button qiblaShortcut;
 	private Button hijriShorcut;
+	
+	private Button restOgServShortCut;
+	private Button mosqhortcut;
+	private Button enummerShorcut;
+	private Button aboutShorcut;
+	
 
 	private TextView calender;
 	private DateTime currentDateTime;
@@ -144,8 +154,7 @@ public class PreyOverviewFragment extends Fragment implements OnClickListener,
 		nextDay = (ImageButton) root.findViewById(R.id.prey_next_day);
 		nextDay.setOnClickListener(this);
 		prevDay = (ImageButton) root.findViewById(R.id.prey_prev_day);
-		latesetNewsScrollView = (HorizontalScrollView) root
-				.findViewById(R.id.latesetNewsScrollView);
+		
 		shortCutContainer = (LinearLayout) root
 				.findViewById(R.id.shortCutContainer);
 
@@ -163,6 +172,18 @@ public class PreyOverviewFragment extends Fragment implements OnClickListener,
 		halalShortCut.setOnClickListener(this);
 		qiblaShortcut.setOnClickListener(this);
 		hijriShorcut.setOnClickListener(this);
+		
+		
+		restOgServShortCut = (Button) root.findViewById(R.id.butogSerShortCut);
+		mosqhortcut = (Button) root.findViewById(R.id.moskShortcut);
+		enummerShorcut = (Button) root.findViewById(R.id.halalEShortCut);
+		aboutShorcut = (Button) root.findViewById(R.id.aboutShortcut);
+		
+		restOgServShortCut.setOnClickListener(this);
+		mosqhortcut.setOnClickListener(this);
+		enummerShorcut.setOnClickListener(this);
+		aboutShorcut.setOnClickListener(this);
+		
 	
 		latestNewsContainer = (LinearLayout) root
 				.findViewById(R.id.latestNewsContainer);
@@ -215,6 +236,7 @@ public class PreyOverviewFragment extends Fragment implements OnClickListener,
 		super.onResume();
 
 		cancelAllPreviousRequest();
+		timeCurrentlyUsedInPreyOverView = new DateTime();
 		preyTimes = loadPrayTimes(new DateTime());
 		setUpCurrentDay();
 		
@@ -562,9 +584,28 @@ public class PreyOverviewFragment extends Fragment implements OnClickListener,
 			switchFragment(myDetailFragment, null);
 		}
 		if (v.equals(halalShortCut)) {
-			HalalList myDetailFragment = new HalalList();
+			HalalSlaktOgProdWebView myDetailFragment = new HalalSlaktOgProdWebView();
 			switchFragment(myDetailFragment, null);
 		}
+		if (v.equals(restOgServShortCut)) {
+			HalalButOgServWebView myDetailFragment = new HalalButOgServWebView();
+			switchFragment(myDetailFragment, null);
+		}
+		if (v.equals(enummerShorcut)) {
+			HalalEogIngredienserWebView myDetailFragment = new HalalEogIngredienserWebView();
+			switchFragment(myDetailFragment, null);
+		}
+		if (v.equals(aboutShorcut)) {
+			AboutSnmsFragment myDetailFragment = new AboutSnmsFragment();
+			switchFragment(myDetailFragment, null);
+		}
+		if (v.equals(mosqhortcut)) {
+			MosqWebView myDetailFragment = new MosqWebView();
+			switchFragment(myDetailFragment, null);
+		}
+		
+		
+		
 
 		for (RelativeLayout key : newsMap.keySet()) {
 			if (v.equals(key)) {

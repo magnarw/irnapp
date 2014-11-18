@@ -21,8 +21,8 @@
 	    android:layout_alignParentTop="true"
 	    android:layout_width="fill_parent"
 	    android:layout_height="180dp"
-	     android:scaleType="centerCrop"
-	     android:src="@drawable/moskebg"
+	     android:scaleType="fitCenter"
+	     android:src="@drawable/irnlogo"
 	    android:padding="0dp"
 	 />
  
@@ -41,9 +41,9 @@
     
     android:gravity="bottom"
      android:background="#99000000"
-       android:text="Om SNMS"
+       android:text="En paraplyorganisasjon for islamske trossamfunn og organisasjoner i Norge. "
     android:textColor="@color/white" 
-     android:textAppearance="@android:style/TextAppearance.Large" />
+     android:textAppearance="@android:style/TextAppearance.Small" />
     />   
 	 
 
@@ -88,7 +88,7 @@
   android:layout_width="wrap_content"
 	  android:layout_height="wrap_content"
     android:gravity="bottom"
-    android:text="Lofsrudhøgda 210"
+    android:text="Storgaten 39 (5. etg.)"
     android:textColor="@color/black" 
      android:textAppearance="@android:style/TextAppearance.Medium" 
      />
@@ -98,7 +98,7 @@
   android:layout_width="wrap_content"
 	  android:layout_height="wrap_content"
     android:gravity="bottom"
-    android:text="Oslo, Norway"
+    android:text="N-0183 Oslo\n Norge"
     android:textColor="@color/black" 
      android:textAppearance="@android:style/TextAppearance.Small" 
      />
@@ -134,7 +134,7 @@
 	    android:layout_width="fill_parent"
 	    android:layout_height="100dp"
 	     android:scaleType="centerCrop"
-	     android:src="@drawable/moskmap"
+	     android:src="@drawable/irnmap2"
 	    android:padding="0dp"
 	 />
 		      
@@ -252,25 +252,160 @@
     
      
     </RelativeLayout>
+        
+  	    	     	  <RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+       android:id="@+id/callcontainer"
+       android:clickable="true"
+    android:paddingLeft="5dp" 
+      android:paddingTop="10dp" 
+    android:background="@drawable/linkbackground"
+   	android:layout_marginTop="15dp"
+   	android:layout_below="@+id/webpageContainer"
+   	android:layout_marginLeft="15dp"
+ 	android:layout_marginRight="15dp"
+ 	     android:layout_gravity="left"
+ 	      android:paddingBottom="10dp"
+   >    
+  	    	      
+  	    	      
+        
+  	    	      
+  	    	      
 
-
- 	   <TextView
-    android:id="@+id/Newstext"
-  android:layout_width="fill_parent"
-	  android:layout_height="wrap_content"
-	  	 android:layout_marginLeft="15dp"
- 	 android:layout_marginRight="15dp"
- 	 android:layout_marginTop="10dp"
- 	  android:paddingBottom="20dp"
-    android:layout_below="@+id/webpageContainer"
-    android:gravity="left"
-    android:padding="5dp"
-    android:text="Søndre Nordstrand Muslimske Senter (SNMS) er et muslimsk trossamfunn i Bydel Søndre Nordstrand opprettet i 2004. Trossamfunnet er en aktiv bidragsyter i lokalsamfunnet og er opptatt av å vise at Islam er en fredelig religion som inviterer til dialog og utveksling av kunnskap. 
-\n\nVi har som mål å leve etter islamsk lære for å få Allahs velsignelse og suksess både i dette livet og etter døden. Vi tilbyr religiøse tjenester, veiledning, og mener at økt kunnskap vil føre til bedre forståelse som åpner for dialog og vennskap."
-    android:textColor="@color/black" 
-     android:textAppearance="@android:style/TextAppearance.Small" />
-    /> 
+  	      <ImageView
+  	          android:id="@+id/calllinkmob"
+  	          android:layout_width="25dp"
+  	          android:layout_height="25dp"
+  	          android:gravity="bottom"
+  	           android:layout_alignParentLeft="true"
+  	          android:padding="0dp"
+  	          android:background="@color/snmsBackgroundBlue"
+  	          android:layout_marginRight="10dp"
+  	          android:src="@drawable/ic_action_call" />
     
+    <TextView
+    android:id="@+id/webpageText"
+  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:layout_gravity="bottom"
+    android:layout_toRightOf="@+id/calllinkmob"
+    android:paddingTop="0dp"
+    android:text="Kontakt oss telefon"
+    android:textColor="@color/black" 
+     android:textAppearance="@android:style/TextAppearance.Small" 
+     />
+    
+        <ImageView
+  	          android:id="@+id/addTocal"
+  	          android:layout_width="25dp"
+  	          android:layout_height="25dp"
+  	              android:layout_alignParentRight="true"
+  	          android:padding="0dp"
+  	          android:layout_marginLeft="10dp"
+  	          android:src="@drawable/ic_button_arrow" />
+    
+     
+    </RelativeLayout>
+ 
+    	    	     	  <RelativeLayout
+    	    	     	      android:id="@+id/emailcontainerhome"
+    	    	     	      android:layout_width="fill_parent"
+    	    	     	      android:layout_height="wrap_content"
+    	    	     	      android:layout_below="@+id/callcontainer"
+    	    	     	      android:layout_gravity="left"
+    	    	     	      android:layout_marginLeft="15dp"
+    	    	     	      android:layout_marginRight="15dp"
+    	    	     	      android:layout_marginTop="15dp"
+    	    	     	      android:background="@drawable/linkbackground"
+    	    	     	      android:clickable="true"
+    	    	     	      android:orientation="horizontal"
+    	    	     	      android:paddingBottom="10dp"
+    	    	     	      android:paddingLeft="5dp"
+    	    	     	      android:paddingTop="10dp" >
+
+  	      <ImageView
+  	          android:id="@+id/epostlink"
+  	          android:layout_width="25dp"
+  	          android:layout_height="25dp"
+  	          android:gravity="bottom"
+  	           android:layout_alignParentLeft="true"
+  	          android:padding="0dp"
+  	          android:layout_marginRight="10dp"
+  	          android:background="@color/snmsBackgroundBlue"
+  	          android:src="@drawable/ic_action_mail" />
+    
+    <TextView
+    android:id="@+id/webpageText"
+  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:layout_gravity="bottom"
+    android:layout_toRightOf="@+id/epostlink"
+    android:paddingTop="0dp"
+    android:text="Kontakt oss epost"
+    android:textColor="@color/black" 
+     android:textAppearance="@android:style/TextAppearance.Small" 
+     />
+    
+        <ImageView
+  	          android:id="@+id/addTocal"
+  	          android:layout_width="25dp"
+  	          android:layout_height="25dp"
+  	              android:layout_alignParentRight="true"
+  	          android:padding="0dp"
+  	          android:layout_marginLeft="10dp"
+  	          android:src="@drawable/ic_button_arrow" />
+    
+     
+    </RelativeLayout>
+    
+    
+    
+    	    	     	  <RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+       android:id="@+id/other"
+       android:clickable="true"
+    android:paddingLeft="5dp" 
+      android:paddingTop="10dp" 
+    android:background="@drawable/linkbackground"
+   	android:layout_marginTop="15dp"
+   	android:layout_below="@+id/emailcontainerhome"
+   	android:layout_marginLeft="15dp"
+ 	android:layout_marginRight="15dp"
+ 	     android:layout_gravity="left"
+ 	      android:paddingBottom="10dp"
+   >    
+  	    	      
+  	    	      
+        
+  	    	      
+  	    	      
+
+
+    
+    <TextView
+    android:id="@+id/webpageText"
+  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:layout_gravity="bottom"
+  
+    android:paddingTop="0dp"
+    android:text="Konto nr. 05304230454\n POST SENDING:\nStorgaten 39 (5. etg.)\nN-0183 Oslo"
+    android:textColor="@color/black" 
+     android:textAppearance="@android:style/TextAppearance.Small" 
+     />
+    
+        
+    
+     
+    </RelativeLayout>
     
     
 

@@ -13,7 +13,7 @@ import android.view.Window;
 
 public class SnmsSplashScreen extends Activity
 {
-    private static final long DELAY = 6000;
+    private static final long DELAY = 9000;
     private boolean scheduled = false;
     private Timer splashTimer;
 

@@ -56,6 +56,10 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.webkit.WebSettings.PluginState;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -68,7 +72,7 @@ import android.widget.TextView.OnEditorActionListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class HalalList extends Fragment  {
+public class MosqWebView extends Fragment  {
 
 
 	
@@ -77,8 +81,36 @@ public class HalalList extends Fragment  {
 		   super.onCreateView(inflater, container,
 			        savedInstanceState);
 
-		  View root = inflater.inflate(R.layout.listhalal, container,false);
-		  return root; 
+		  View root = inflater.inflate(R.layout.listhijiri, container,false);
+		//  View root = inflater.inflate(R.layout.listhijiri, container,false);
+		  WebView webview =(WebView) root.findViewById(R.id.webview);
+		  
+		  webview.getSettings().setAppCacheEnabled(false);
+		    webview.getSettings().setJavaScriptEnabled(true);
+		    webview.setInitialScale(1);
+		    webview.getSettings().setPluginState(PluginState.ON);
+
+		    webview.setWebViewClient(new WebViewClient() {
+		        @Override
+		        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+		            view.loadUrl(url);
+		            return true;
+		        }
+		    });
+
+		    WebSettings webSettings = webview.getSettings();
+		    webSettings.setJavaScriptEnabled(true);
+		    webSettings.setBuiltInZoomControls(true);
+		    webview.getSettings().setAppCacheMaxSize( 5 * 1024 * 1024 ); // 5MB
+		    webview.getSettings().setAppCachePath( this.getActivity().getApplicationContext().getCacheDir().getAbsolutePath() );
+		  
+		    webSettings.setLoadsImagesAutomatically(true);
+		    webSettings.setLoadWithOverviewMode(true);
+		    webSettings.setSupportZoom(true);
+		    webSettings.setUseWideViewPort(true);
+			webview.loadUrl("http://www.irn.no/moskeene");
+			
+			return root;
 
 	}
 	

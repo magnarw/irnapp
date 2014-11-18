@@ -49,6 +49,9 @@ public class AboutSnmsFragment extends Fragment implements OnClickListener {
 	TextView faceText;
 	RelativeLayout likeOnFaceWraper;
 	RelativeLayout webpageContainer;
+	RelativeLayout mobWraper;
+	RelativeLayout homeWrapper;
+	RelativeLayout epostWrapper;
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -67,6 +70,14 @@ public class AboutSnmsFragment extends Fragment implements OnClickListener {
 			
 			webpageContainer = (RelativeLayout)root.findViewById(R.id.webpageContainer);
 			webpageContainer.setOnClickListener(this);
+			
+			mobWraper = (RelativeLayout)root.findViewById(R.id.callcontainer);
+			mobWraper.setOnClickListener(this);
+			
+			
+			
+			epostWrapper = (RelativeLayout)root.findViewById(R.id.emailcontainerhome);
+			epostWrapper.setOnClickListener(this);
 			
 			addressLine1 = (TextView) root.findViewById(R.id.addressLine1);
 			addressLine2 = (TextView) root.findViewById(R.id.addressLine2);
@@ -107,31 +118,58 @@ public class AboutSnmsFragment extends Fragment implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		if(v.equals(mapImage)){
-			String uri = String.format(Locale.ENGLISH, "geo:%f,%f?z=%d&q=%f,%f (%s)",  10.828062300000056,59.84703700000001,10,  10.828062300000056, 59.84703700000001, "SNMS");
+			String uri = String.format(Locale.ENGLISH, "geo:%f,%f?z=%d&q=%f,%f (%s)",  10.7546940,59.91511408,10,  10.7546940, 59.91511408, "IRN");
 			Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
 			webpageContainer.setPressed(true);
 			getActivity().startActivity(intent);
 		}
 		if(v.equals(webImage)){
-			Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.muslimskesenter.no"));
+			Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.irn.no"));
 			startActivity(browserIntent);
 			webpageContainer.setPressed(true);
 		}
 		if(v.equals(webpageContainer)){
-			Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.muslimskesenter.no"));
+			Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.irn.no"));
 			startActivity(browserIntent);
 		}
 		if(v.equals(faceImage)){
-			Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/pages/S%C3%B8ndre-Nordstrand-Muslimske-Senter/312656635444443?fref=ts"));
+			Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/pages/Islamsk-R%C3%A5d-Norge/135532573125957?fref=ts"));
 			startActivity(browserIntent);
 			likeOnFaceWraper.setPressed(true);
 		}if(v.equals(faceText)){
-			Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/pages/S%C3%B8ndre-Nordstrand-Muslimske-Senter/312656635444443?fref=ts"));
+			Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/pages/Islamsk-R%C3%A5d-Norge/135532573125957?fref=ts"));
 			startActivity(browserIntent);
 			likeOnFaceWraper.setPressed(true);
 		}if(v.equals(likeOnFaceWraper)){
-			Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/pages/S%C3%B8ndre-Nordstrand-Muslimske-Senter/312656635444443?fref=ts"));
+			Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/pages/Islamsk-R%C3%A5d-Norge/135532573125957?fref=ts"));
 			startActivity(browserIntent);
+			
+		}
+		if(v.equals(homeWrapper)){
+			Intent intent = new Intent(Intent.ACTION_CALL);
+
+			intent.setData(Uri.parse("tel:" + "0047 48 48 64 00"));
+			getActivity().startActivity(intent);
+			
+		}
+		if(v.equals(mobWraper)){
+			Intent intent = new Intent(Intent.ACTION_CALL);
+
+			intent.setData(Uri.parse("tel:" + "0047 48 48 64 00"));
+			getActivity().startActivity(intent);
+			
+		}
+		if(v.equals(epostWrapper)){
+			/* Create the Intent */
+			Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
+
+			/* Fill it with Data */
+			emailIntent.setType("plain/text");
+			emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"post@irn.no"});
+			
+
+			/* Send it off to the Activity-Chooser */
+			getActivity().startActivity(Intent.createChooser(emailIntent, "Send mail..."));
 			
 		}
 	}
