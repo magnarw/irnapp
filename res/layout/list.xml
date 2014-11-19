@@ -11,7 +11,7 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:background="@color/white"
 android:orientation="vertical" 
-   android:layout_weight="0.9"
+   android:layout_weight="1"
 >
 	<ListView 
 	    android:id="@android:id/list"
@@ -27,16 +27,6 @@ android:orientation="vertical"
 		android:dividerHeight="4dp" />
 	
 	</LinearLayout>
-	 <TextView
-        android:id="@+id/newslistheader"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.1"
-        android:textSize="13dp"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:text="Applikasjonen er utviklet av\nSNMS Teknisk komité\nMåtte Allah swt akseptere alles bidrag\nFor tilbakemelding, ris og ros, kontakt:\nadmin@muslimskesenter.no\nM.Masoom Zubair"
-      android:divider="@color/snmsGrey"
-        android:textAppearance="@android:style/TextAppearance.Medium" />
+	
 
 </LinearLayout>

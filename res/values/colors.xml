@@ -6,13 +6,13 @@
     <color name="blue">#009</color>
     <color name="white">#FFF</color>
     <color name="black">#000</color>
-    <color name="snmsActivePreyColor">#789f4b</color>
+    <color name="snmsActivePreyColor">#008c35</color>
     <color name="snmsActionBar">#252525</color>
     <color name="snmHeaderBar">#2b3d36</color>
     <color name="snmHeaderBorder">#c5c7c8</color>
     <color name="snmsDarkBlue">#000</color>
-    <color name="snmsLightBlue">#2D2D2D</color>
-    <color name="snmsActiveGreen">#789f4b</color>
+    <color name="snmsLightBlue">#434343</color>
+    <color name="snmsActiveGreen">#008c35</color>
     <color name="snmsWhite">#F6F6F6</color>
     <color name="snmsGrey">#e2e2e3</color>
     <color name="snmsDarkGreen">#789F4B</color>
@@ -22,6 +22,6 @@
     <color name="snmsEventDarkGray">#DCDCDD</color>
     <color name="snmsSelectedColor">#dfe6d6</color>
     <color name="snmsXdarkBlue">#172430</color>
-      <color name="snmsButtonBlue">#2D2D2D</color>
+      <color name="snmsButtonBlue">#434343</color>
           <color name="snmsBackgroundBlue">#1C2C3B</color>
 </resources>

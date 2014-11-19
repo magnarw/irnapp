@@ -40,6 +40,7 @@ private RequestQueue requestQueue;
 	}
 	
 	
+	
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
 		adapter = new HolidayListAdapter(getActivity());

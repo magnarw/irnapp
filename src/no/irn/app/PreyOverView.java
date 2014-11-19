@@ -95,7 +95,7 @@ public class PreyOverView extends  BaseActivity {
 				AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
 				// 2. Chain together various setter methods to set the dialog characteristics
-				builder.setMessage(alert).setTitle("Pushvarsel fra SNMS");
+				builder.setMessage(alert).setTitle("Pushvarsel fra IRN");
 
 				// 3. Get the AlertDialog from create()
 				AlertDialog dialog = builder.create();

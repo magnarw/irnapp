@@ -17,6 +17,7 @@ public class PreyCountDownTimer extends CountDownTimer {
 		this.textViewToUpdate = textView;
 		this.adapter = adapter;
 		
+		
 	}
 	
 	@Override

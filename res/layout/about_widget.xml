@@ -402,7 +402,18 @@
      android:textAppearance="@android:style/TextAppearance.Small" 
      />
     
-        
+      <TextView
+    android:id="@+id/webpageText2"
+  android:layout_width="wrap_content"
+	  android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:layout_gravity="bottom"
+  android:layout_below="@+id/webpageText"
+    android:paddingTop="0dp"
+    android:text="\nMåtte Allah swt akseptere alles bidrag.For tilbakemelding, ris og ros, kontakt: app@irn.no / M.Masoom Zubair IRN Teknisk komite"
+    android:textColor="@color/black" 
+     android:textAppearance="@android:style/TextAppearance.Small" 
+     />    
     
      
     </RelativeLayout>

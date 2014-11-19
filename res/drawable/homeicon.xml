@@ -10,6 +10,7 @@
         android:right="20dp"
         android:top="12dp"
         android:bottom="12dp"
+       
         android:drawable="@drawable/ic_navigation_drawer2">
     </item>
 

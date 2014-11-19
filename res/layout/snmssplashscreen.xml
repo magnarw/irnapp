@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:src="@drawable/ic_logo_new_active" />
+        android:src="@drawable/ic_irn_splash" />
  
     <TextView
         android:layout_width="fill_parent"
