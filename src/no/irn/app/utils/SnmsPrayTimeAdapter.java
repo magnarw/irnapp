@@ -359,7 +359,7 @@ public class SnmsPrayTimeAdapter {
 		
 		//clean up orginal calender
 		if(time.getMonthOfYear()>=3 && time.getMonthOfYear()<=10){
-			if(time.getMonthOfYear()==3 && time.getDayOfMonth()>=30){
+			if(time.getMonthOfYear()==3 && time.getDayOfMonth()>30){
 				timeFromString = timeFromString.minusHours(1);
 			}else if(time.getMonthOfYear()==10 && time.getDayOfMonth()<26){
 				timeFromString = timeFromString.minusHours(1);
@@ -375,8 +375,8 @@ public class SnmsPrayTimeAdapter {
 		if(toReturn.getDayOfYear()>getLastSundayInMarch(time) && toReturn.getDayOfYear()<getLastSundayInOctober(time)){
 			toReturn = toReturn.plusHours(1);
 		}
-		if(time.getDayOfYear() == getLastSundayInOctober(time))
-			toReturn = toReturn.plusHours(1);
+		//if(time.getDayOfYear() == getLastSundayInOctober(time))
+		//	toReturn = toReturn.plusHours(1);
 		
 		
 		
