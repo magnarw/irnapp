@@ -118,7 +118,7 @@ public class AboutSnmsFragment extends Fragment implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		if(v.equals(mapImage)){
-			String uri = "geo:10.7546940,59.91511408";
+			String uri = "geo:59.91511408,10.7546940";
 			startActivity(new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(uri)));
 			Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
 			webpageContainer.setPressed(true);

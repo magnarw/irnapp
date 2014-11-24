@@ -140,7 +140,7 @@ public class SnmsPrayTimeAdapter {
 		
 		if(!settings.getHasAvansertPreyCalenderSet()){
 			if(settings.getHasShafiPreyCalenderSet())
-				return adjustForDaylightSavings(time,readPrayItemFormXml(time,"asr1x"));
+				return adjustForDaylightSavings(time,getPreyItemBasedOnCity("Oslo",time,false,"asr1x"));
 			else if(settings.getHasCityCalednerSet()){
 				if(settings.isAsr1City())
 					return adjustForDaylightSavings(time,getPreyItemBasedOnCity(settings.getCity(),time,false,"asr1x"));
@@ -148,7 +148,7 @@ public class SnmsPrayTimeAdapter {
 				 return adjustForDaylightSavings(time,getPreyItemBasedOnCity(settings.getCity(),time,false, "asr2x"));
 			}
 			else {
-				return adjustForDaylightSavings(time,readPrayItemFormXml(time,"asr2x"));
+				return adjustForDaylightSavings(time,getPreyItemBasedOnCity("Oslo",time,false, "asr2x"));
 			}
 		}else {
 			PrayTime prayers = new PrayTime();
@@ -222,22 +222,46 @@ public class SnmsPrayTimeAdapter {
 			
 			return dayPreyListMap;
 			
-		}
-		
-		
-		DateTime dateTime = new DateTime(year, month, 1, 1, 0, 0, 000);
-		List<PreyItemList> dayPreyListMap = new ArrayList<PreyItemList>();
-		for (int i = 1; i <= dateTime.dayOfMonth().getMaximumValue(); i++) {
-			DateTime dateTime2 = dateTime.plusDays(i-1);
+		}	
+		else {
+			List<PreyItemList> dayPreyListMap = new ArrayList<PreyItemList>();
+			DateTime dateTime2 = new DateTime(year, month,1, 1, 0, 0, 000);
 			DateTime midnight = dateTime2.minusHours(dateTime2.getHourOfDay())
 					.minusMinutes(dateTime2.getMinuteOfHour())
 					.minusSeconds(dateTime2.getSecondOfMinute());
-			List<PreyItem> items = this.getPrayListForDate(midnight);
-			PreyItemList list = new PreyItemList(items, i);
-			dayPreyListMap.add(list);
+			List<PreyItem> items = null;
+			if(settings.isAsr1City() == true){
+				items =getPreyItemBasedOnCity("Oslo",midnight,true,"asr1x");
+			}
+			else {
+				items =getPreyItemBasedOnCity("Oslo",midnight,true,"asr2x");
+			} 
+			
+			int counter = 0; 
+			PreyItemList list = new PreyItemList();
+			int day = 1; 
+			list.setDay(day);
+			Iterator it = items.iterator();
+			while(it.hasNext()){
+				if(counter!=6){
+					list.getPreylist().add((PreyItem) it.next());
+					counter++; 
+				}else {
+					dayPreyListMap.add(list);
+					list = new PreyItemList();
+					day++; 
+					list.setDay(day);
+					counter = 0; 
+				}
+				
+			}
+			
+			return dayPreyListMap;
+			
 		}
 		
-		return dayPreyListMap;
+		
+		
 	}
 
 	private List<PreyItem> readFeed(XmlPullParser parser, DateTime time)

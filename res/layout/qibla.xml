@@ -12,6 +12,17 @@
         android:layout_centerHorizontal="true"
         android:src="@drawable/ic_compass" />
 
- 
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+           android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_marginBottom="49dp"
+        android:text="Før du åpner Qibla:
+Legg telefonen på flatt underlag og bort fra metallgjenstander." />
 
 </RelativeLayout>

@@ -20,9 +20,9 @@
 	    android:layout_alignParentLeft="true"
 	    android:layout_alignParentTop="true"
 	    android:layout_width="fill_parent"
-	    android:layout_height="180dp"
+	    android:layout_height="wrap_content"
 	     android:scaleType="fitCenter"
-	     android:src="@drawable/irnlogo"
+	     android:src="@drawable/irnlogo_cropped"
 	    android:padding="0dp"
 	 />
  
@@ -34,9 +34,8 @@
   android:layout_width="fill_parent"
 	  android:layout_height="wrap_content"
 	  android:padding="5dp"
-    android:layout_alignLeft="@+id/headerImage1"
-    android:layout_alignRight="@+id/headerImage1"
-    android:layout_alignBottom="@+id/headerImage1"
+  
+    android:layout_below="@+id/headerImage1"
     android:layout_margin="0dp"
     
     android:gravity="bottom"
@@ -98,7 +97,7 @@
   android:layout_width="wrap_content"
 	  android:layout_height="wrap_content"
     android:gravity="bottom"
-    android:text="N-0183 Oslo\n Norge"
+    android:text="0183 Oslo\nNorge"
     android:textColor="@color/black" 
      android:textAppearance="@android:style/TextAppearance.Small" 
      />
@@ -369,17 +368,9 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
+      	android:layout_marginBottom="15dp"
        android:id="@+id/other"
-       android:clickable="true"
-    android:paddingLeft="5dp" 
-      android:paddingTop="10dp" 
-    android:background="@drawable/linkbackground"
-   	android:layout_marginTop="15dp"
-   	android:layout_below="@+id/emailcontainerhome"
-   	android:layout_marginLeft="15dp"
- 	android:layout_marginRight="15dp"
- 	     android:layout_gravity="left"
- 	      android:paddingBottom="10dp"
+ android:layout_below="@+id/emailcontainerhome"
    >    
   	    	      
   	    	      
@@ -391,26 +382,42 @@
     
     <TextView
     android:id="@+id/webpageText"
-  android:layout_width="wrap_content"
+ android:layout_width="fill_parent"
 	  android:layout_height="wrap_content"
     android:gravity="bottom"
     android:layout_gravity="bottom"
-  
+       android:clickable="true"
+    android:paddingLeft="5dp" 
+    android:layout_marginRight="15dp"
+    android:background="@drawable/linkbackground"
+   	android:layout_marginTop="15dp"
+   	android:layout_marginLeft="15dp"
+ 	      android:paddingBottom="10dp"
     android:paddingTop="0dp"
-    android:text="Konto nr. 05304230454\n POST SENDING:\nStorgaten 39 (5. etg.)\nN-0183 Oslo"
+    android:text="Konto nr. 05304230454\nPOST SENDING:\nStorgaten 39 (5. etg.)\n0183 Oslo"
     android:textColor="@color/black" 
      android:textAppearance="@android:style/TextAppearance.Small" 
      />
-    
+  
       <TextView
     android:id="@+id/webpageText2"
-  android:layout_width="wrap_content"
+ android:layout_width="fill_parent"
 	  android:layout_height="wrap_content"
     android:gravity="bottom"
     android:layout_gravity="bottom"
-  android:layout_below="@+id/webpageText"
+       android:clickable="true"
+    android:paddingLeft="5dp" 
+    
+    android:background="@drawable/linkbackground"
+   	android:layout_marginTop="15dp"
+   	  	android:layout_marginBottom="15dp"
+   	android:layout_marginLeft="15dp"
+   		android:layout_marginRight="15dp"
+ 	      android:paddingBottom="10dp"
     android:paddingTop="0dp"
-    android:text="\nMåtte Allah swt akseptere alles bidrag.For tilbakemelding, ris og ros, kontakt: app@irn.no / M.Masoom Zubair IRN Teknisk komite"
+  android:layout_below="@+id/webpageText"
+   
+    android:text="Om appen\nMåtte Allah swt akseptere alles bidrag.\nFor tilbakemelding, kontakt: app@irn.no\nM.Masoom Zubair / IRN Teknisk komite"
     android:textColor="@color/black" 
      android:textAppearance="@android:style/TextAppearance.Small" 
      />    
