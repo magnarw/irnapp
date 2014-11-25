@@ -22,7 +22,7 @@ import com.android.volley.*;
 import com.android.volley.Request.Method;
 import com.android.volley.toolbox.Volley;
 
-import no.snms.app.R;
+
 
 public class HolidayListFragment extends ListFragment {
 	

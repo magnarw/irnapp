@@ -13,9 +13,7 @@ import no.irn.app.news.NewsListFragment.NewsListAdapter;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import no.snms.app.R;
-import no.snms.app.R.id;
-import no.snms.app.R.layout;
+import no.irn.app.R;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;

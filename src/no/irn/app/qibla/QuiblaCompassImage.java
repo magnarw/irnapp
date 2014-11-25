@@ -1,8 +1,7 @@
 package no.irn.app.qibla;
 
-import no.snms.app.R;
-import no.snms.app.R.id;
-import no.snms.app.R.layout;
+
+import no.irn.app.R;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

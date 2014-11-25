@@ -9,7 +9,7 @@ import no.irn.app.preylist.PreyOverviewFragment;
 
 import com.actionbarsherlock.app.SherlockDialogFragment;
 
-import no.snms.app.R;
+import no.irn.app.R;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.Dialog;

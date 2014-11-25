@@ -2,8 +2,8 @@ package no.irn.app.alarm;
 
 import java.io.IOException;
 
-import no.snms.app.R;
-import no.snms.app.R.*;
+import no.irn.app.R;
+import no.irn.app.R.*;
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;

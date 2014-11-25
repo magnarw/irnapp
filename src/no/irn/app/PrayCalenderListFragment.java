@@ -16,7 +16,7 @@ import org.joda.time.DateTime;
 
 import com.android.volley.toolbox.NetworkImageView;
 
-import no.snms.app.R;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.net.Uri;

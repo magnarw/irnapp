@@ -5,6 +5,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import no.irn.app.BaseActivity;
+import no.irn.app.R;
 import no.irn.app.domain.NewsItem;
 import no.irn.app.images.ImageCacheManager;
 import no.irn.app.news.NewsDetailsFragment;
@@ -19,9 +20,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.NetworkImageView;
 
-import no.snms.app.R;
-import no.snms.app.R.id;
-import no.snms.app.R.layout;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;

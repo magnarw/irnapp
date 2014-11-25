@@ -19,9 +19,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.NetworkImageView;
 
-import no.snms.app.R;
-import no.snms.app.R.id;
-import no.snms.app.R.layout;
+
+import no.irn.app.R;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;

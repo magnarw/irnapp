@@ -20,9 +20,8 @@ import com.android.volley.Request.Method;
 import com.android.volley.toolbox.NetworkImageView;
 import com.android.volley.toolbox.Volley;
 
-import no.snms.app.R;
-import no.snms.app.R.id;
-import no.snms.app.R.layout;
+
+import no.irn.app.R;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;

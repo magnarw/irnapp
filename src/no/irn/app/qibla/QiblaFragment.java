@@ -12,9 +12,8 @@ import org.joda.time.format.DateTimeFormatter;
 
 import com.android.volley.toolbox.NetworkImageView;
 
-import no.snms.app.R;
-import no.snms.app.R.id;
-import no.snms.app.R.layout;
+
+import no.irn.app.R;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.ContentValues;

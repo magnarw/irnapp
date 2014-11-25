@@ -13,8 +13,9 @@ import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import android.graphics.BitmapFactory;
 import android.util.Log;
+import no.irn.app.BuildConfig;
+import no.irn.app.R;
 
-import no.snms.app.BuildConfig;
 import com.jakewharton.disklrucache.DiskLruCache;
 
 /**

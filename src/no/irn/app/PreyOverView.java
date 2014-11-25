@@ -16,7 +16,7 @@ import org.joda.time.DateTime;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import no.snms.app.R;
+
 
 
 

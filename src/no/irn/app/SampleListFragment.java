@@ -16,7 +16,7 @@ import no.irn.app.news.NewsListFragment;
 import no.irn.app.preylist.PreyOverviewFragment;
 import no.irn.app.qibla.QiblaFragment;
 import no.irn.app.settings.SettingsFragment;
-import no.snms.app.R;
+
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

@@ -6,7 +6,7 @@ import no.irn.app.database.SnmsDAO;
 import no.irn.app.network.RequestManager;
 import no.irn.app.news.NewsListFragment;
 import no.irn.app.preylist.PreyOverviewFragment;
-import no.snms.app.R;
+
 
 import org.joda.time.DateTime;
 

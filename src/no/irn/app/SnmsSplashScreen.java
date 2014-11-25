@@ -3,7 +3,7 @@ package no.irn.app;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import no.snms.app.R;
+
 
 import android.app.Activity;
 import android.content.Intent;

@@ -4,6 +4,7 @@ import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import no.irn.app.R;
 import no.irn.app.images.ImageCacheManager;
 
 import org.joda.time.DateTime;
@@ -12,9 +13,6 @@ import org.joda.time.format.DateTimeFormatter;
 
 import com.android.volley.toolbox.NetworkImageView;
 
-import no.snms.app.R;
-import no.snms.app.R.id;
-import no.snms.app.R.layout;
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.DialogInterface;
