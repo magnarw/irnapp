@@ -23,6 +23,7 @@ import org.joda.time.DateMidnight;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeConstants;
 import org.joda.time.DateTimeField;
+import org.joda.time.DateTimeZone;
 import org.joda.time.LocalDate;
 import org.joda.time.LocalTime;
 import org.joda.time.MonthDay;
@@ -67,7 +68,7 @@ public class SnmsPrayTimeAdapter {
 	
 	private int getLastSundayInMarch(DateTime time) {
 		int lastSundayInMarch = -1;
-		DateTime march = new DateTime(time.getYear(),3, 1,0,0);
+		DateTime march = new DateTime(time.getYear(),3, 1,4,0);
 		while(march.getMonthOfYear()==3){
 			if(march.getDayOfWeek()==DateTimeConstants.SUNDAY){
 				lastSundayInMarch = march.getDayOfYear();
@@ -383,22 +384,29 @@ public class SnmsPrayTimeAdapter {
 		
 		//clean up orginal calender
 		if(time.getMonthOfYear()>=3 && time.getMonthOfYear()<=10){
-			if(time.getMonthOfYear()==3 && time.getDayOfMonth()>30){
+			if(time.getMonthOfYear()==3 && time.getDayOfMonth()>=30){
 				timeFromString = timeFromString.minusHours(1);
 			}else if(time.getMonthOfYear()==10 && time.getDayOfMonth()<26){
 				timeFromString = timeFromString.minusHours(1);
 			}else if (time.getMonthOfYear()>3 && time.getMonthOfYear()<10){
 				timeFromString = timeFromString.minusHours(1);
+			}else if(time.getMonthOfYear() == 3 && time.getDayOfMonth() == 29 && time.getYear()==2016){
+				timeFromString = timeFromString.minusHours(1);
 			}
 		}
 		
+		//create a new date starting at midnight with time zone gt+1
+		DateTimeZone zone = DateTimeZone.forID("Europe/Amsterdam");
+		DateTime dateToReturn = new DateTime( time.getYear(), time.getMonthOfYear(), time.getDayOfMonth(), timeFromString.getHourOfDay(), timeFromString.getMinuteOfHour(), 0, zone );
 		
-		DateTime toReturn = time.plusHours(timeFromString.getHourOfDay()).plusMinutes(timeFromString.getMinuteOfHour());
+		System.out.println("date nå:" + dateToReturn.toString());
+		//DateTime toReturn = time.plusHours(timeFromString.getHourOfDay()).plusMinutes(timeFromString.getMinuteOfHour());
 		
 		//adjust for summer time
-		if(toReturn.getDayOfYear()>getLastSundayInMarch(time) && toReturn.getDayOfYear()<getLastSundayInOctober(time)){
-			toReturn = toReturn.plusHours(1);
+		if(dateToReturn.getDayOfYear()>=getLastSundayInMarch(dateToReturn) && dateToReturn.getDayOfYear()<getLastSundayInOctober(dateToReturn)){
+			dateToReturn = dateToReturn.plusHours(1);
 		}
+		System.out.println("date etter:" + dateToReturn.toString());
 		//if(time.getDayOfYear() == getLastSundayInOctober(time))
 		//	toReturn = toReturn.plusHours(1);
 		
@@ -407,7 +415,7 @@ public class SnmsPrayTimeAdapter {
 		//stuff to clean up summer time in the orginal calender(from 2013)
 
 		
-		return toReturn;
+		return dateToReturn;
 	
 	}
 	

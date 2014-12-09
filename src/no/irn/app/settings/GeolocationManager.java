@@ -22,7 +22,6 @@ public class GeolocationManager {
 		if(mInstance == null) {
 			mInstance = new GeolocationManager();
 		}
-
 		return mInstance;
 	}
 
